@@ -1,4 +1,4 @@
-import FooterComponent from "./components/ui/Footer.components";
+import FooterComponent from "./components/ui/Footer.component";
 import NavbarComponent from "./components/ui/Navbar.component";
 import { Routes ,Route} from "react-router-dom";
 import HomePage from "./pages/Home.page";
