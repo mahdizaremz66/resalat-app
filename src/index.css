@@ -10,5 +10,10 @@ body {
 
 .wapper {
   background-color: aqua;
-  min-height: calc(100vh -(56px + 40px)) ;
+  min-height: calc(100vh -(56px + 40px));
+}
+
+.about-img {
+  width: 350px;
+  height: 350px;
 }
