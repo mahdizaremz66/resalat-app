@@ -12,7 +12,7 @@ const ContactUsPage = () => {
       <div className="row align-items-center pt-1">
         <div className="col-md-7">
           <div className="mt-5">
-            <h3 className="text primary">How to Contact us</h3>
+            <h3 className="text text-primary">How to Contact us</h3>
             <h5>+98 913 253 7217</h5>
             <h5>+35 35 25 2000</h5>
             <h5>mahdizare.mz66@gmail.com</h5>

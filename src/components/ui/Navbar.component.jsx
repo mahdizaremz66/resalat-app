@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React, { useRef } from 'react';
 import "./Navbar.css";
 
 import { Link } from 'react-router-dom';
@@ -7,8 +7,10 @@ import { FaCoins } from "react-icons/fa";
 const NavbarComponent = () => {
     const btnToggleRef = useRef();
 
-    const toggleMenu = () =>{
-        btnToggleRef.current.click();
+    const toggleMenu = () => {
+
+        if (window.innerWidth < 992)
+            btnToggleRef.current.click();
     }
 
     return (
@@ -25,8 +27,8 @@ const NavbarComponent = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item"  onClick={toggleMenu}>
-                            <Link className="nav-link" to="/"> 
+                        <li className="nav-item" onClick={toggleMenu}>
+                            <Link className="nav-link" to="/">
                                 Home
                             </Link>
                         </li>
@@ -35,12 +37,12 @@ const NavbarComponent = () => {
                                 FAQ
                             </Link>
                         </li>
-                        <li className="nav-item"  onClick={toggleMenu}>
+                        <li className="nav-item" onClick={toggleMenu}>
                             <Link className="nav-link" to="/about-us">
                                 About Us
                             </Link>
                         </li>
-                        <li className="nav-item"  onClick={toggleMenu}>
+                        <li className="nav-item" onClick={toggleMenu}>
                             <Link className="nav-link" to="/contact-us">
                                 Contact Us
                             </Link>
