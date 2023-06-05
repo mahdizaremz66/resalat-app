@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Spinner from "../components/ui/Spinner.component";
 import axios from "axios";
 import { baseUrl } from "../constans/api"
+import CoinsComponent from "../components/coins/Coins.component";
 
 const HomePage = () => {
   const [data, setData] = useState([]);
@@ -11,9 +12,9 @@ const HomePage = () => {
   useEffect(() => {
     setLoading(true);
     axios(baseUrl)
-      .then(response => {
+      .then((response) => {
         setLoading(false)
-        console.log(response.data);
+        setData (response.data);
 
       })
       .catch(error => {
@@ -23,7 +24,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="contaner">
+    <div className="container">
       <div className="row">
         <div className="col-12 text-center">
           <h1>Crypto Tracking</h1>
@@ -34,8 +35,11 @@ const HomePage = () => {
 
       <div className="row">
         <div className="col-12">
-          {loading ? <Spinner /> : error !== "" ? <h1>{error}</h1> : <h1>Data is Ready</h1>}
+          
+          {loading ? <Spinner /> : error !== "" ? <h1>{error}</h1> : <CoinsComponent data={data} />}
 
+
+          {<CoinsComponent data={data} />}
         </div>
       </div>
 
