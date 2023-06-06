@@ -5,11 +5,11 @@
 }
 
 body {
-  background-color: aliceblue;
+  background-color: white;
 }
 
 .wapper {
-  background-color: aqua;
+  background-color: whitesmoke;
   min-height: calc(100vh -(56px + 40px));
 }
 

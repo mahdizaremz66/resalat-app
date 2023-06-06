@@ -14,13 +14,12 @@ const HomePage = () => {
     axios(baseUrl)
       .then((response) => {
         setLoading(false)
-        setData (response.data);
+        setData(response.data);
 
       })
       .catch(error => {
         setError("An Error Occured");
       });
-
   }, []);
 
   return (
@@ -35,8 +34,7 @@ const HomePage = () => {
 
       <div className="row">
         <div className="col-12">
-          
-          {loading ? <Spinner /> : error !== "" ? <h1>{error}</h1> : <CoinsComponent data={data} />}
+          {loading ? <Spinner /> : error === "" ? <div> <CoinsComponent data={data} /> </ div> : <h1>{error}</h1>}
 
 
           {<CoinsComponent data={data} />}

@@ -2,7 +2,7 @@ import React from "react";
 import './Coins.css'
 import { Link } from "react-router-dom";
 
-const CoinsComponent = ({ data }) => {
+const CoinsDetailComponent = ({ data }) => {
     return (
         <table className="table table-hover">
             <thead>
@@ -37,4 +37,4 @@ const CoinsComponent = ({ data }) => {
     )
 }
 
-export default CoinsComponent;
+export default CoinsDetailComponent;
