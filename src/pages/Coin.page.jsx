@@ -10,9 +10,11 @@ const CoinPage = () => {
     const paramObject = useParams();
     const url = detailsUrl(paramObject.id);
 
+    console.log(url);
+    
     const [coin, setCoin] = useState({});
     const [loading, setLoading] = useState([false]);
-    const [error, setError] = useState([""]);
+    const [error, setError] = useState("");
 
     useEffect(() => {
         setLoading(true);
@@ -20,18 +22,18 @@ const CoinPage = () => {
             .then((response) => {
                 setLoading(false)
                 setCoin(response.data);
-
             })
             .catch(error => {
                 setError("An Error Occured");
             });
-    }, []);
+    }, [url]);
 
 
     return (
-        <div className='container'>{
-            loading ? <Spinner /> : error !== "" ? <h1>{error}</h1> : <CoinsDetailComponent />
-        }
+        <div className='container'>
+            {
+                loading ? <Spinner /> : error !== "" ? <h1>{error}</h1> : <CoinsDetailComponent coin={coin} />
+            }
         </div>
     )
 }

@@ -7,7 +7,7 @@ import CoinsComponent from "../components/coins/Coins.component";
 const HomePage = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState([false]);
-  const [error, setError] = useState([""]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -34,10 +34,9 @@ const HomePage = () => {
 
       <div className="row">
         <div className="col-12">
-          {loading ? <Spinner /> : error === "" ? <div> <CoinsComponent data={data} /> </ div> : <h1>{error}</h1>}
-
-
-          {<CoinsComponent data={data} />}
+          {
+          loading ? <Spinner /> : error !== "" ?   <h1>{error}</h1> :<div> <CoinsComponent data={data} /> </ div>
+          }
         </div>
       </div>
 
