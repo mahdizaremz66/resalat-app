@@ -31,7 +31,7 @@ const CoinsDetailComponent = ({ coin }) => {
                         <h4>
                             Market Cap :
                             <span className="ms-2">{coin.market_data.market_cap.usd.toLocaleString()}</span>
-                            <span className="ms-2 badg bg-success">{coin.market_data.market_cap_change_percentage_24h.toFixed(2)}%</span>
+                            <span className="ms-2 badge bg-success">{coin.market_data.market_cap_change_percentage_24h.toFixed(2)}%</span>
                         </h4>
                     </div>
                     <div>

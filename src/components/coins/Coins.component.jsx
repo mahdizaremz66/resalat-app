@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const CoinsComponent = ({ data }) => {
     return (
-        <table className="table table-hover">
-            <thead>
+        <table className="table table-hover table-striped table-bordered">
+            <thead className="table-dark">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Logo</th>
